@@ -32,7 +32,7 @@ infix fun Polinom.ori(other: Polinom): Polinom {
 }
 
 fun Polinom.afisare(): String {
-    return this.joinToString("+") { monom ->
+    return this.joinToString(" + ") { monom ->
         val coefStr = if (monom.coef == 1 && monom.exx == 0 && monom.exy == 0) "1" else if (monom.coef == 1) "" else "${monom.coef}"
         val xStr = if (monom.exx > 0) "x" + if (monom.exx > 1) "^${monom.exx}" else "" else ""
         val yStr = if (monom.exy > 0) "y" + if (monom.exy > 1) "^${monom.exy}" else "" else ""
